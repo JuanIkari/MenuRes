@@ -1,130 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/frisby-modal-2.png" />
+    <title>Frisby - Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/img/frisby-modal-2.png"/>
-  <title>Frisby - Menu</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <!--nav-->
+    <div class="navbar">
+      <div class="logo"><img src="img/logo frisby.png" alt="Logo" /></div>
+      <div class="links">
+        <a href="#" class="link">Restaurantes</a>
+        <a href="#" class="link">Contáctanos</a>
+        <a href="#" class="link">Califica la experiencia</a>
+      </div>
 
-<body>
-  <!--nav-->
-  <div class="navbar">
-    <div class="logo"><img src="img/logo frisby.png" alt="Logo"></div>
-    <div class="links">
-      <a href="#" class="link">Restaurantes</a>
-      <a href="#" class="link">Contáctanos</a>
-      <a href="#" class="link">Califica la experiencia</a>
-    </div>
-
-    <div class="button-container">
-      <div class="button">Regístrate</div>
-      <div class="button">Iniciar sesión</div>
-    </div>
-  </div>
-  </div>
-  </div>
-  <!--banner-->
-  <div class="banner">
-    <img src="http://wpa.aquarius.frisby.com.co/wp-content/uploads/2024/04/banner-web-web.png" alt="Banner"
-      style="width: 100%;">
-
-  </div>
-  </div>
-  <!--botones menu-->
-  <div class="button-menu-container">
-    <div class="menu-item">Desayunos</div>
-    <div class="menu-item">Almuerzos</div>
-    <div class="menu-item">Comidas</div>
-    <div class="menu-item">Entradas</div>
-    <div class="menu-item">Menú infantil</div>
-    <div class="menu-item">Bebidas</div>
-  </div>
-  <!--menu-->
-  <div class="name">Desayunos</div>
-
-  <div class="container">
-    <div class="product">
-      <img src="https://laherradura.com.co/wp-content/uploads/2020/08/frisby-2-580x375-1.jpg" />
-      <div class="details">
-        <div class="title">pollo</div>
-        <div class="description">descripcion</div>
-        <div class="price">$19.000</div>
+      <div class="button-container">
+        <div class="button">Regístrate</div>
+        <div class="button">Iniciar sesión</div>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://laherradura.com.co/wp-content/uploads/2020/08/frisby-2-580x375-1.jpg" />
-      <div class="details">
-        <div class="title">pollo</div>
-        <div class="description">descripcion</div>
-        <div class="price">$19.000</div>
+    <!--banner-->
+    <div class="banner">
+      <img
+        src="http://wpa.aquarius.frisby.com.co/wp-content/uploads/2024/04/banner-web-web.png"
+        alt="Banner"
+        style="width: 100%"
+      />
+    </div>
+
+    <!--botones menu-->
+    <div class="button-menu-container">
+      <div class="menu-item">
+        <a href="#desayunos" class="menub">Desayunos</a>
+      </div>
+      <div class="menu-item">
+        <a href="#almuerzos" class="menub">Almuerzos</a>
+      </div>
+      <div class="menu-item"><a href="#comidas" class="menub">Comidas</a></div>
+      <div class="menu-item">
+        <a href="#entradas" class="menub">Entradas</a>
+      </div>
+      <div class="menu-item">
+        <a href="#infantil" class="menub">Menú infantil</a>
+      </div>
+      <div class="menu-item"><a href="#bebidas" class="menub">Bebidas</a></div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalDetails"></div>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://laherradura.com.co/wp-content/uploads/2020/08/frisby-2-580x375-1.jpg" />
-      <div class="details">
-        <div class="title">pollo</div>
-        <div class="description">descripcion</div>
-        <div class="price">$19.000</div>
+    <!--menu-->
+    <div id="desayunos" class="name">Desayunos</div>
+    <div id="1cardGroup" class="container"></div>
+
+    <div id="almuerzos" class="name">Almuerzos</div>
+    <div id="2cardGroup" class="container"></div>
+
+    <div id="comidas" class="name">Comidas</div>
+    <div id="3cardGroup" class="container"></div>
+
+    <div id="entradas" class="name">Entradas</div>
+    <div id="4cardGroup" class="container"></div>
+
+    <div id="infantil" class="name">Menú infantil</div>
+    <div id="5cardGroup" class="container"></div>
+
+    <div id="bebidas" class="name">Bebidas</div>
+    <div id="6cardGroup" class="container"></div>
+
+    <!--footer-->
+    <div class="footer">
+      <div class="social">
+        <h1>Encuéntranos</h1>
+        <div class="icon">
+          <img src="img/ig icon.png" alt="ig" />
+        </div>
+        <div class="icon">
+          <img src="img/fb icon.png" alt="fb" />
+        </div>
+        <div class="icon">
+          <img src="img/yt icon.png" alt="yt" />
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h1 class="footer-heading">Servicio al cliente</h1>
+        <div class="footer-item">Bogotá 000 0000</div>
+        <div class="footer-item">Medellín 000 0000</div>
+        <div class="footer-item">Cali 000 0000</div>
+        <div class="footer-item">Celular 000 0000 000</div>
       </div>
     </div>
-
-    <div class="product">
-      <img src="https://laherradura.com.co/wp-content/uploads/2020/08/frisby-2-580x375-1.jpg" />
-      <div class="details">
-        <div class="title">pollo</div>
-        <div class="description">descripcion</div>
-        <div class="price">$19.000</div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://laherradura.com.co/wp-content/uploads/2020/08/frisby-2-580x375-1.jpg" />
-      <div class="details">
-        <div class="title">pollo</div>
-        <div class="description">descripcion</div>
-        <div class="price">$19.000</div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://laherradura.com.co/wp-content/uploads/2020/08/frisby-2-580x375-1.jpg" />
-      <div class="details">
-        <div class="title">pollo</div>
-        <div class="description">descripcion</div>
-        <div class="price">$19.000</div>
-      </div>
-    </div>
-  </div>
-  <!--footer-->
-  <div class="footer">
-
-    <div class="social">
-      <h1>Encuéntranos</h1>
-      <div class="icon">
-        <img src="img/ig icon.png" alt="ig">
-      </div>
-      <div class="icon">
-        <img src="img/fb icon.png" alt="fb">
-      </div>
-      <div class="icon">
-        <img src="img/yt icon.png" alt="yt">
-      </div>
-    </div>
-
-    <div class="footer-column">
-      <h1 class="footer-heading">Servicio al cliente</h1>
-      <div class="footer-item">Bogotá 000 0000</div>
-      <div class="footer-item">Medellín 000 0000</div>
-      <div class="footer-item">Cali 000 0000</div>
-      <div class="footer-item">Celular 000 0000 000</div>
-    </div>
-  </div>
-
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

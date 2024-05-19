@@ -10,10 +10,10 @@ body {
 /* nav */
 .navbar {
   width: 100%;
-  max-width: 90%;
+  max-width: 100%;
   min-width: 320px;
   height: 50px;
-  padding: 40px 5%;
+  padding: 40px 0; 
   background: white;
   display: flex;
   justify-content: space-between;
@@ -82,7 +82,9 @@ body {
   height: auto;
   overflow: hidden;
   position: relative;
+  margin: 0 auto; 
 }
+
 
 /* botones menu */
 
@@ -111,6 +113,12 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.menu-item a {
+  color: white; 
+  text-decoration: none; 
+}
+
+
 .menu-item:hover {
   background: #f2b705;
 }
@@ -118,7 +126,9 @@ body {
 /* menu */
 
 .name {
-  width: calc(100% - 40px);
+  width: 100%; 
+  max-width: 1242px; 
+  margin: 0 auto; 
   color: black;
   font-size: 20px;
   font-weight: 600;
@@ -128,9 +138,11 @@ body {
   padding-top: 10px;
 }
 
+
 .container {
   width: calc(100% - 40px);
   max-width: 1282px;
+  margin: 0 auto; 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
@@ -138,6 +150,7 @@ body {
   padding-right: 20px;
   margin-bottom: 80px;
 }
+
 
 .product {
   width: 100%;
@@ -236,7 +249,13 @@ body {
 .product img {
   display: block;
 }
+
+.product:hover img {
+  opacity: 0.7; 
+}
+
 .product .preview-button {
+  
   display: none;
   position: absolute;
   top: 30%;
@@ -249,6 +268,7 @@ body {
   cursor: pointer;
   border-radius: 5px;
   z-index: 1;
+  
 }
 .product:hover .preview-button {
   display: block;
@@ -256,7 +276,7 @@ body {
 
 /* Modal */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -266,21 +286,37 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
 }
+
+.modal-content img {
+  max-width: 50%;
+  height: auto;
+}
+
+#modalDetails {
+  flex: 1;
+}
+
 .close {
   color: #aaa;
-  float: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: black;

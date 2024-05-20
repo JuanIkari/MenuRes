@@ -28,10 +28,12 @@ const getComidas = async () => {
         const modal = document.getElementById("myModal");
         const modalDetails = document.getElementById("modalDetails");
         modalDetails.innerHTML = `
-               <img src="${element.img}" />
+               <img id="modalImage" class="modal-image" src="${element.img}" alt="comida" />
+               <div class="modal-text">
                ${element.title}<br>
-               ${element.description}<br>
-               ${element.price}
+               <p id="modalDescription" class="modal-description">${element.description}</p><br>
+               <p id="modalPrice" class="modal-price">${element.price}</p>
+               </div>
           `;
         modal.style.display = "block";
       });

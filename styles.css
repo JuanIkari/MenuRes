@@ -182,7 +182,9 @@ body {
   line-height: 30px;
   word-wrap: break-word;
 }
-
+.price {
+  color: #fd0000;
+}
 .description {
   color: #828282;
 }
@@ -289,7 +291,7 @@ body {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin: 15% auto; /* 15% desde el top y centrado horizontalmente */
   padding: 20px;
   border: 1px solid #888;
@@ -297,7 +299,7 @@ body {
 }
 
 .close {
-  color: #aaa;
+  color: #fd0000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -312,28 +314,91 @@ body {
 
 .modal-details {
   display: flex;
-  flex-direction: row; /* Alinear los elementos en fila */
+  flex-direction: row;
 }
 
 .modal-image {
-  max-width: 40%; /* Ajusta según tu necesidad */
-  margin-right: 20px; /* Espacio entre imagen y texto */
-  
+  max-width: 40%;
+  margin-right: 20px;
 }
 
 .modal-text {
   display: flex;
-  flex-direction: column; /* Alinear texto y precio en columna */
-  justify-content: space-between; /* Distribuir espacio entre los elementos */
-  
+  flex-direction: column; 
+  justify-content: space-between;
 }
 
+
 .modal-description {
-  margin-bottom: 10px; /* Espacio entre descripción y precio */
+  margin-bottom: 10px;
 }
 
 .modal-price {
-  font-size: 1.5em; /* Ajustar tamaño de texto del precio */
-  color: #d32f2f; /* Color del precio */
+  font-size: 1.5em; 
+  color: #d32f2f; 
   
+}
+
+/* IR ARRIBA */
+
+.go-top-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  z-index: -1;
+}
+
+.go-top-button {
+  width: 0px;
+  height: 0px;
+  background: #fd0000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.go-top-button i{
+  position: absolute;
+  font-size: 16px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #fff;
+  transition: .2s;
+}
+
+.show {
+  z-index: 10;
+}
+
+.show .go-top-button {
+  animation: popup .3s ease-in-out;
+  width: 60px;
+  height: 60px;
+  z-index: 11;
+}
+
+.show i {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+  }
 }

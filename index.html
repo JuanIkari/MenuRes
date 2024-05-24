@@ -6,7 +6,13 @@
     <link rel="icon" href="/img/frisby-modal-2.png" />
     <title>Frisby - Menu</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -40,36 +46,51 @@
         <i class="fas fa-chevron-up"></i>
       </div>
     </div>
-    
+
     <!--botones menu-->
     <div class="button-menu-container">
-      <div class="menu-item">
-        <a href="#desayunos" class="menub">Desayunos</a>
-      </div>
-      <div class="menu-item">
-        <a href="#almuerzos" class="menub">Almuerzos</a>
-      </div>
-      <div class="menu-item"><a href="#comidas" class="menub">Comidas</a></div>
-      <div class="menu-item">
-        <a href="#entradas" class="menub">Entradas</a>
-      </div>
-      <div class="menu-item">
-        <a href="#infantil" class="menub">Menú infantil</a>
-      </div>
-      <div class="menu-item"><a href="#bebidas" class="menub">Bebidas</a></div>
+      <button
+        class="menub menu-item"
+        onclick="window.location.href='#desayunos'"
+      >
+        Desayunos
+      </button>
+      <button
+        class="menub menu-item"
+        onclick="window.location.href='#almuerzos'"
+      >
+        Almuerzos
+      </button>
+      <button class="menub menu-item" onclick="window.location.href='#comidas'">
+        Comidas
+      </button>
+      <button
+        class="menub menu-item"
+        onclick="window.location.href='#entradas'"
+      >
+        Entradas
+      </button>
+      <button
+        class="menub menu-item"
+        onclick="window.location.href='#infantil'"
+      >
+        Menú infantil
+      </button>
+      <button class="menub menu-item" onclick="window.location.href='#bebidas'">
+        Bebidas
+      </button>
     </div>
 
     <!-- MODAL -->
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <div id="modalDetails" class="modal-details">
-          <img id="modalImage" class="modal-image" src="" alt="comida" />
-        </div>
+        <div id="modalDetails" class="modal-details"></div>
       </div>
     </div>
 
     <!--menu-->
+    <hr />
     <div id="desayunos" class="name">Desayunos</div>
     <div id="1cardGroup" class="container"></div>
     <hr />
@@ -88,7 +109,6 @@
     <div id="bebidas" class="name">Bebidas</div>
     <div id="6cardGroup" class="container"></div>
     <hr />
-
 
     <!--footer-->
     <div class="footer">
